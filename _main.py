@@ -1,5 +1,6 @@
 import os
 import c4d
+from c4d import gui
 
 
 def main():
@@ -9,7 +10,6 @@ def main():
     try:
 
         importpath = c4d.gui.InputDialog('Insert path of the C4D files directory', 'C:\example_path')
-        # importpath = r'\\192.168.3.6\current04\DLL_GAMING\Animatic\3dExchange\fromC4D\scriptest'
         newfolder = str(importpath + '\\FBX_export')
         if not os.path.exists(newfolder):  # check if path exist
             os.makedirs(newfolder)
@@ -28,7 +28,8 @@ def main():
                     else:
                         print('error occurred writing file')
         else:
-            print('folder is emtpy')
+            gui.MessageDialog('No c4d files found in given folder!')
+
     finally:
         c4d.documents.CloseAllDocuments()
 
