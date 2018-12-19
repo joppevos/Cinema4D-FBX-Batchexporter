@@ -1,6 +1,14 @@
 import os
 import c4d
+"""
+# LOOK FOR IN A DIRECTORY WITH MULTIPLE FOLDERS, FIND THE C4D FILES IN THOSE FOLDERS. PLACE THEM IN EXACT THE 
+SAME NAME TYPE OF FOLDERS. 
 
+Grab only .c4d files path.split == .c4d?
+
+get the highest version number only. 
+
+"""
 
 def main():
     """
