@@ -8,7 +8,6 @@ def main():
     export all c4d files in given directory to FBX
     """
     try:
-
         importpath = c4d.gui.InputDialog('Insert path of the C4D files directory', 'C:\example_path')
         newfolder = str(importpath + '\\FBX_export')
         if not os.path.exists(newfolder):  # check if path exist
